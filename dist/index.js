@@ -33,6 +33,9 @@ function create(buttonContainer) {
   var OPEN_TEXT = 'OPEN';
 
   buttonContainer.appendChild(button);
+  buttonContainer.appendChild(div);
+  div.appendChild(target);
+  button.style.flexShrink = 0;
   div.style.flex = '1';
   div.style.overflow = 'auto';
   target.style.background = 'rgba(255,255,255,0.9)';

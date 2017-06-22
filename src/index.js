@@ -16,8 +16,8 @@ export default function create(buttonContainer) {
   const OPEN_TEXT = 'OPEN';
 
   buttonContainer.appendChild(button);
-  buttonContainer.appendChild(div);
   div.appendChild(target);
+
   button.style.flexShrink = 0;
   div.style.flex = '1';
   div.style.overflow = 'auto';
