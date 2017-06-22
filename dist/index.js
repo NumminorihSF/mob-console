@@ -33,7 +33,6 @@ function create(buttonContainer) {
   var OPEN_TEXT = 'OPEN';
 
   buttonContainer.appendChild(button);
-  buttonContainer.appendChild(div);
   div.style.flex = '1';
   div.style.overflow = 'auto';
   target.style.background = 'rgba(255,255,255,0.9)';
@@ -46,11 +45,11 @@ function create(buttonContainer) {
     isOpen = !isOpen;
     if (isOpen) {
       button.innerText = CLOSE_TEXT;
-      div.appendChild(target);
+      buttonContainer.appendChild(div);
       div.scrollTop = div.scrollHeight;
     } else {
       button.innerText = OPEN_TEXT;
-      div.removeChild(target);
+      buttonContainer.removeChild(div);
     }
   });
 

@@ -17,6 +17,8 @@ export default function create(buttonContainer) {
 
   buttonContainer.appendChild(button);
   buttonContainer.appendChild(div);
+  div.appendChild(target);
+  button.style.flexShrink = 0;
   div.style.flex = '1';
   div.style.overflow = 'auto';
   target.style.background = 'rgba(255,255,255,0.9)';
@@ -29,11 +31,11 @@ export default function create(buttonContainer) {
     isOpen = !isOpen;
     if (isOpen) {
       button.innerText = CLOSE_TEXT;
-      div.appendChild(target);
+      buttonContainer.appendChild(div);
       div.scrollTop = div.scrollHeight;
     } else {
       button.innerText = OPEN_TEXT;
-      div.removeChild(target);
+      buttonContainer.removeChild(div);
     }
   });
 
