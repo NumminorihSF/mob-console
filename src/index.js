@@ -43,5 +43,9 @@ export default function create(buttonContainer) {
   const logger = new DomLogger(target);
   const replacer = new ConsoleReplacer(console, util.inspect, logger);
   window.console = replacer;
+
+  replacer.opener = button;
+  replacer.logs = logs;
+
   return replacer;
 }
