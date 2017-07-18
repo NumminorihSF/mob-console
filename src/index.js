@@ -47,5 +47,5 @@ export default function create(buttonContainer) {
   replacer.opener = button;
   replacer.logs = div;
 
-  return Object.assign({}, replacer, { replacer, opener, logs });
+  return Object.assign({}, replacer, { replacer, opener: button, logs: div });
 }
