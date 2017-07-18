@@ -45,7 +45,7 @@ export default function create(buttonContainer) {
   window.console = replacer;
 
   replacer.opener = button;
-  replacer.logs = logs;
+  replacer.logs = div;
 
   return replacer;
 }
