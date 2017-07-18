@@ -63,5 +63,5 @@ function create(buttonContainer) {
   replacer.opener = button;
   replacer.logs = div;
 
-  return replacer;
+  return Object.assign({}, replacer, { replacer: replacer, opener: opener, logs: logs });
 }
