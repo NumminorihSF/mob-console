@@ -59,5 +59,9 @@ function create(buttonContainer) {
   var logger = new _DomLogger2.default(target);
   var replacer = new _ConsoleReplacer2.default(console, _util2.default.inspect, logger);
   window.console = replacer;
+
+  replacer.opener = button;
+  replacer.logs = logs;
+
   return replacer;
 }
